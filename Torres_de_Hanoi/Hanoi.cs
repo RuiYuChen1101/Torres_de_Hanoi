@@ -69,9 +69,9 @@ namespace Torres_de_Hanoi
             num_movimientos = 0;
             num_discos = n;
 
-            if (n % 2 != 0) //El num de discos es impar
+            if (n % 2 != 0) 
             {
-                while (pruebaAutomatica() == false) //Mientras la pila final no tenga n discos
+                while (pruebaAutomatica() == false) 
                 {
                     mover_disco(ini, fin);
                     mover_disco(ini, aux);
@@ -79,9 +79,9 @@ namespace Torres_de_Hanoi
                 }
                 
             }
-            else //El num de discos es par
+            else
             {
-                while (pruebaAutomatica() == false) //Mientras la pila final no tenga n discos
+                while (pruebaAutomatica() == false) 
                 {
                     mover_disco(ini, aux);
                     mover_disco(ini, fin);

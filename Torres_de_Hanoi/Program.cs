@@ -10,15 +10,17 @@ namespace Torres_de_Hanoi
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("bienvenido!");
 
-            Pila INI = new Pila(3, "ini");
+            int n =  Convert.ToInt32(Console.ReadLine());
+            Pila INI = new Pila(n, "ini");
             Pila AUX = new Pila("aux");
             Pila FIN = new Pila("fin");
 
-            Console.WriteLine("bienvenido!");
+
 
             Hanoi Hanoi = new Hanoi();
-            int m =Hanoi.iterativo(3, INI, FIN, AUX);
+            int m =Hanoi.iterativo(n, INI, FIN, AUX);
             Console.WriteLine("Número de movimientos: " + m);
 
             //Keep the console window open in debug mode.
