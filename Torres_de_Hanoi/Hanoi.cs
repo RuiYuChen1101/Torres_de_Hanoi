@@ -91,6 +91,31 @@ namespace Torres_de_Hanoi
             
             return num_movimientos;
         }
+       
+        public static int algoritmoRecursivo(int n,Pila ini,Pila fin, Pila aux)
+        {
+            INI = ini;
+            FIN = fin;
+            AUX = aux;
+                        
+            num_discos = n;
+
+            int m= 0;
+
+            if (n == 1)
+            {
+                mover_disco(ini,fin);
+                m++;
+            }
+            else
+            {
+                m += algoritmoRecursivo(n-1,ini,aux,fin);
+                mover_disco(ini, fin);
+                m++;
+                m += algoritmoRecursivo(n - 1, aux, fin, ini);
+            }
+            return m;
+        }
 
         private static bool pruebaAutomatica( )
         {
