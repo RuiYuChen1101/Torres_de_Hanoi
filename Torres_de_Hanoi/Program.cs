@@ -15,7 +15,7 @@ namespace Torres_de_Hanoi
             Pila AUX = new Pila("aux");
             Pila FIN = new Pila("fin");
 
-           
+            Console.WriteLine("hola");
 
             Hanoi Hanoi = new Hanoi();
             int m =Hanoi.iterativo(3, INI, FIN, AUX);
